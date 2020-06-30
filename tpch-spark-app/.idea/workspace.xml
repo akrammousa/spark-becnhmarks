@@ -4,10 +4,7 @@
     <list default="true" id="037ea0ea-2d95-4df4-9907-687bfa5ebddc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../tpcds/TPCDS-Queries" beforeDir="false" afterPath="$PROJECT_DIR$/../tpcds/TPCDS-Queries" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tpcds/spark-sql-perf" beforeDir="false" afterPath="$PROJECT_DIR$/../tpcds/spark-sql-perf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/my-app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/my-app-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="40" column="37" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="40" selection-end-column="37" />
+            <state relative-caret-position="550">
+              <caret line="172" column="19" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,10 +115,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="2368" />
-    <option name="width" value="919" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="63" />
+    <option name="y" value="25" />
+    <option name="width" value="1857" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -208,14 +206,15 @@
       <workItem from="1592840008989" duration="1441000" />
       <workItem from="1593005545703" duration="1809000" />
       <workItem from="1593007777917" duration="405000" />
+      <workItem from="1593514102664" duration="280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83218000" />
+    <option name="totallyTimeSpent" value="83498000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2368" y="0" width="919" height="1050" extended-state="4" />
+    <frame x="63" y="25" width="1857" height="1055" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25254813" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -231,7 +230,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.25515744" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2537797" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.21857305" side_tool="true" weight="0.2952586" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
@@ -414,8 +413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="40" column="37" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="550">
+          <caret line="172" column="19" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

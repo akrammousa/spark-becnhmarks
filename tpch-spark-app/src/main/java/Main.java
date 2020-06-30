@@ -168,8 +168,10 @@ public class Main {
         String sqlQueriesPath = args[2];
         String queriesNumbers = args[3];
         String logsPath = args[4];
-        if(tblReadPath.compareToIgnoreCase("FALSE") != 0)
-            writeTheParquetData(spark, tblReadPath,ParquetPath);
+        if(tblReadPath.compareToIgnoreCase("FALSE") != 0) {
+            writeTheParquetData(spark, tblReadPath, ParquetPath);
+            return;
+        }
 
         //runBenchmarkQuery("Select * From CUSTOMER", "Run 1",spark);
         Dataset<Row> dataset = spark.read().parquet(ParquetPath + "customer");
