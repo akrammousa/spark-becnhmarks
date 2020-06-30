@@ -127,7 +127,7 @@ public class Main {
         });
 
         //write customer schema into parquet
-        spark.read().format("csv").schema(customer_schema).option("delimiter", "|").load(tblReadPath + "customer.tbl").write().mode("overwrite").parquet(writeParquetPath+"customer");
+        spark.read().option("header","false").format("csv").schema(customer_schema).option("delimiter", "|").load(tblReadPath + "customer.tbl").write().mode("overwrite").parquet(writeParquetPath+"customer");
         //done
         ///write supplier schema into parquet
         spark.read().format("csv").schema(nation_schema).option("delimiter", "|").load(tblReadPath +"nation.tbl").write().mode("overwrite").parquet(writeParquetPath+"nation");
