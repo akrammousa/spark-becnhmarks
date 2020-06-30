@@ -216,11 +216,12 @@ public class Main {
             {
                 try {
                     System.out.println("test");
-                    if (!((line = bufferedReader.readLine()) != null)) break;
+                    assert bufferedReader != null;
+                    if ((line = bufferedReader.readLine()) == null) break;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                sb.append(line + " ");
+                sb.append(line).append(" ");
             }
             String[] queries = sb.toString().split(";");
             for (int j = 0; j <queries.length-1 ; j++) {
