@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8c5bbd6-2e25-4a60-9fe1-fb4e61388db1" name="Default Changelist" comment="" />
+    <list default="true" id="c8c5bbd6-2e25-4a60-9fe1-fb4e61388db1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pageRankSbt/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ConnectedComponents.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ConnectedComponents.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pageRankSbt/.idea/modules/pageRankSbt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../pageRankSbt/.idea/modules/pageRankSbt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pageRankSbt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pageRankSbt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pageRankSbt/src/main/scala/PageRank.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../pageRankSbt/src/main/scala/PageRank.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pageRankSbt/target/scala-2.12/classes/PageRank$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../pageRankSbt/target/scala-2.12/classes/PageRank$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pageRankSbt/target/scala-2.12/classes/PageRank.class" beforeDir="false" afterPath="$PROJECT_DIR$/../pageRankSbt/target/scala-2.12/classes/PageRank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pageRankSbt/target/scala-2.12/pageranksbt_2.12-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../pageRankSbt/target/scala-2.12/pageranksbt_2.12-0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tpcds/TPCDS-Queries" beforeDir="false" afterPath="$PROJECT_DIR$/../tpcds/TPCDS-Queries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tpcds/spark-sql-perf" beforeDir="false" afterPath="$PROJECT_DIR$/../tpcds/spark-sql-perf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tpch-spark-app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tpch-spark-app/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tpch-spark-app/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tpch-spark-app/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tpch-spark-app/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tpch-spark-app/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tpch-spark-app/target/my-app-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../tpch-spark-app/target/my-app-1.0-SNAPSHOT.jar" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -25,10 +42,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ConnectedComponents.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            <state relative-caret-position="484">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,6 +62,9 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -54,16 +74,19 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="586" />
-    <option name="y" value="245" />
-    <option name="width" value="889" />
-    <option name="height" value="789" />
+    <option name="x" value="63" />
+    <option name="y" value="25" />
+    <option name="width" value="1857" />
+    <option name="height" value="1055" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -71,15 +94,43 @@
               <item name="connectedComponentsSbt" type="b2602c69:ProjectViewProjectNode" />
               <item name="connectedComponentsSbt" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="connectedComponentsSbt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connectedComponentsSbt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connectedComponentsSbt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connectedComponentsSbt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connectedComponentsSbt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connectedComponentsSbt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connectedComponentsSbt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connectedComponentsSbt" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="connectedComponentsSbt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="connectedComponentsSbt" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -150,17 +201,17 @@
       <workItem from="1591184509380" duration="2270000" />
       <workItem from="1591435457535" duration="63000" />
       <workItem from="1591793921722" duration="372000" />
+      <workItem from="1593008161984" duration="2787000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6421000" />
+    <option name="totallyTimeSpent" value="9208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="25" width="1857" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23633352" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23909442" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -175,7 +226,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3286638" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="11" weight="0.32972974" />
@@ -206,10 +257,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/scala/ConnectedComponents.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        <state relative-caret-position="484">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>

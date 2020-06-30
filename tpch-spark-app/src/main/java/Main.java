@@ -11,12 +11,34 @@ import static org.apache.spark.sql.types.DataTypes.*;
 
 public class Main {
 
-    private static void runBenchmarkQuery(String query, String message, SparkSession spark, ArrayList<Long> runTimes){
+    private static void  writeDFInFile(Dataset<Row> df, String logsPath){
+        try {
+            FileWriter logical_plan_file = new FileWriter(logsPath + "logical.txt");
+
+            FileWriter physical_plan_file = new FileWriter("/mnt/01D43FA6387D16F0/GP-general/SparkConfigurationsAutotuning/resources/physical.txt");
+
+            logical_plan_file.write(df.queryExecution().optimizedPlan().toString());
+
+            physical_plan_file.write(df.queryExecution().executedPlan().toString());
+
+            // Closing printwriter
+            logical_plan_file.close();
+
+            physical_plan_file.close();
+            System.out.println("plans wrote successfully");
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    private static void runBenchmarkQuery(String query, String message, SparkSession spark, ArrayList<Long> runTimes , String logsPath){
         System.out.println("Starting: " + message);
         //start time
         long queryStartTime = System.currentTimeMillis();
         //run the query and show the result
-        spark.sql(query).show(5);
+        Dataset<Row> df = spark.sql(query);
+        df.show(5);
+        writeDFInFile(df , logsPath);
         //end time
         long queryStopTime = System.currentTimeMillis();
         long runTime = (long) ((queryStopTime-queryStartTime) / 1000F);
@@ -138,13 +160,14 @@ public class Main {
                 .getOrCreate();
 
 
-        if (args.length < 4){
+        if (args.length < 5){
             return;
         }
         String tblReadPath = args[0];
         String ParquetPath = args[1];
         String sqlQueriesPath = args[2];
         String queriesNumbers = args[3];
+        String logsPath = args[4];
         if(tblReadPath.compareToIgnoreCase("FALSE") != 0)
             writeTheParquetData(spark, tblReadPath,ParquetPath);
 
@@ -198,7 +221,7 @@ public class Main {
             }
             String[] queries = sb.toString().split(";");
             for (int j = 0; j <queries.length-1 ; j++) {
-                runBenchmarkQuery(queries[j],"RUN query number "+queriesNumbersArray[i],spark,runTimes);
+                runBenchmarkQuery(queries[j],"RUN query number "+queriesNumbersArray[i],spark,runTimes ,logsPath);
             }
         }
 
