@@ -215,6 +215,7 @@ public class Main {
             while (true)
             {
                 try {
+                    System.out.println("test");
                     if (!((line = bufferedReader.readLine()) != null)) break;
                 } catch (IOException e) {
                     e.printStackTrace();
