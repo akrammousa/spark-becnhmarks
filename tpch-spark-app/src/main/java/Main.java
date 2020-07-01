@@ -15,7 +15,7 @@ import static org.apache.spark.sql.types.DataTypes.*;
 
 public class Main {
 
-    private static void  writeDFInFile(Dataset<Row> df, String logsPath){
+    private static void  writeDFInFile(Dataset<Row> df, String logsPath) throws IOException {
         try {
             Configuration configuration = new Configuration();
             FileSystem fs = FileSystem.get(configuration);
@@ -27,14 +27,13 @@ public class Main {
             physicalOutputWriter.writeBytes(df.queryExecution().executedPlan().toString());
             logicalOutputWriter.close();
             physicalOutputWriter.close();
-            fs.close();
             System.out.println("plans wrote successfully");
         }
         catch (IOException e){
-            e.printStackTrace();
+            throw e;
         }
     }
-    private static void runBenchmarkQuery(String query, String message, SparkSession spark, ArrayList<Long> runTimes , String logsPath){
+    private static void runBenchmarkQuery(String query, String message, SparkSession spark, ArrayList<Long> runTimes , String logsPath) throws IOException {
         System.out.println("Starting: " + message);
         //start time
         long queryStartTime = System.currentTimeMillis();
