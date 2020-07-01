@@ -1,3 +1,7 @@
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FSDataOutputStream;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
 import org.apache.spark.SparkConf;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
@@ -13,22 +17,24 @@ public class Main {
 
     private static void  writeDFInFile(Dataset<Row> df, String logsPath){
         try {
-            FileWriter logical_plan_file = new FileWriter(logsPath + "logical.txt");
-
-            FileWriter physical_plan_file = new FileWriter("/mnt/01D43FA6387D16F0/GP-general/SparkConfigurationsAutotuning/resources/physical.txt");
-
-            logical_plan_file.write(df.queryExecution().optimizedPlan().toString());
-
-            physical_plan_file.write(df.queryExecution().executedPlan().toString());
-
-            // Closing printwriter
-            logical_plan_file.close();
-
-            physical_plan_file.close();
+            Configuration configuration = new Configuration();
+            FileSystem fs = FileSystem.get(configuration);
+            Path logicalPathOutFile = new Path(logsPath + "logical.txt");
+            Path physicalPathOutFile = new Path(logsPath + "physical.txt");
+            FSDataOutputStream logicalOutputWriter = fs.create(logicalPathOutFile);
+            FSDataOutputStream physicalOutputWriter = fs.create(physicalPathOutFile);
+            logicalOutputWriter.writeBytes(df.queryExecution().optimizedPlan().toString());
+            physicalOutputWriter.writeBytes(df.queryExecution().executedPlan().toString());
+            logicalOutputWriter.close();
+            physicalOutputWriter.close();
             System.out.println("plans wrote successfully");
         }
         catch (IOException e){
-            e.printStackTrace();
+            try {
+                throw e;
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
     }
 
@@ -585,7 +591,7 @@ public class Main {
         spark.read().format("csv").schema(web_site).option("delimiter", "|").load(tblReadPath + "web_site.dat").write().mode("overwrite").parquet(writeParquetPath+"web_site");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         SparkSession spark = SparkSession
                 .builder()
@@ -661,18 +667,18 @@ public class Main {
         for (int i = 0; i < queriesNumbersArray.length; i++) {
             StringBuilder sb = new StringBuilder();
             String line = null;
+            FileSystem fs = FileSystem.get(new Configuration());
             BufferedReader bufferedReader = null;
             try {
                 bufferedReader = new BufferedReader(
-                        new FileReader(sqlQueriesPath + "query" + queriesNumbersArray[i] + ".sql")
-                );
+                        new InputStreamReader(fs.open(new Path(sqlQueriesPath + "query" + queriesNumbersArray[i] + ".sql"))));
             } catch (FileNotFoundException e) {
-                e.printStackTrace();
+                throw e;
             }
             while (true)
             {
                 try {
-                    if (!((line = bufferedReader.readLine()) != null)) break;
+                    if ((line = bufferedReader.readLine()) == null) break;
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
