@@ -152,7 +152,7 @@ public class Main {
         //done
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         SparkConf conf = new SparkConf().setAppName("Java Spark");
         SparkSession spark = SparkSession
@@ -210,7 +210,7 @@ public class Main {
                         new FileReader(sqlQueriesPath + Integer.parseInt(queriesNumbersArray[i]) + ".sql")
                 );
             } catch (FileNotFoundException e) {
-                e.printStackTrace();
+                throw e;
             }
             while (true)
             {
