@@ -5,6 +5,9 @@ import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
 import java.io.*;
 import java.util.ArrayList;
 import static org.apache.spark.sql.types.DataTypes.*;
@@ -152,7 +155,7 @@ public class Main {
         //done
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
 
         SparkConf conf = new SparkConf().setAppName("Java Spark");
         SparkSession spark = SparkSession
@@ -204,11 +207,11 @@ public class Main {
         for (int i = 0; i < queriesNumbersArray.length; i++) {
             StringBuilder sb = new StringBuilder();
             String line = null;
+            FileSystem fs = FileSystem.get(new Configuration());
             BufferedReader bufferedReader = null;
             try {
                 bufferedReader = new BufferedReader(
-                        new FileReader(sqlQueriesPath + Integer.parseInt(queriesNumbersArray[i]) + ".sql")
-                );
+                        new InputStreamReader(fs.open(new Path(sqlQueriesPath + Integer.parseInt(queriesNumbersArray[i]) + ".sql"))));
             } catch (FileNotFoundException e) {
                 throw e;
             }
